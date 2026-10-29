@@ -1,0 +1,33 @@
+MIT License
+
+Copyright (c) 2026 ClimbPath
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Repository-wide license policy
+
+This license applies by default to all libraries, source files, examples, documentation, and other materials in this repository, unless a different license or explicit licensing notice is provided for a specific component.
+
+**Component-specific licenses take precedence.** If a library or component contains its own `LICENSE` file or an explicit licensing notice specifying different terms, those terms apply to that library or component instead of the repository-wide MIT License. The component-specific license applies only to the scope it explicitly covers.
+
+For components without their own license or explicit licensing notice, the MIT License above applies.
+
+Some components may include third-party code or assets that are subject to separate copyright notices, licenses, or usage restrictions. Those notices and terms must be preserved and respected, and this repository-wide license does not override them.
