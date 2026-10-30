@@ -1,35 +1,94 @@
+/*!
+ * cp-tooltips - style (css)
+ * Configurable custom cursor with motion particles.
+ * Vanilla JavaScript — no dependencies.
+ *
+ * Author: ClimbPath
+ * Author URL: https://climbpath.eu/
+ * Source: https://github.com/ClimbPath/climbpath-js
+ *
+ * Copyright (c) 2026 ClimbPath
+ * Licensed under the MIT License.
+ * See the LICENSE file for details.
+ */
 .cp-tooltip {
-    position: absolute;
+    position: fixed;
     z-index: 10000;
     display: none;
+    visibility: hidden;
+    opacity: 0;
+    max-width: min(320px, calc(100vw - 20px));
     padding: 8px 12px;
-    font-size: 0.8rem;
-    border-radius: 6px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #ffffff;
+    background: #0f172a;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
     pointer-events: none;
-    white-space: nowrap;
+    overflow-wrap: break-word;
+    transform: translateY(4px) scale(0.98);
+    transition:
+        opacity 160ms ease,
+        transform 160ms ease,
+        visibility 160ms ease;
+}
+
+.cp-tooltip.is-visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.cp-tooltip--custom {
+    padding: 0;
     color: #1a1a1a;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-weight: normal;
+    white-space: normal;
 }
 
 .tt-custom-wrapper {
+    max-width: min(320px, calc(100vw - 20px));
+    padding: 14px;
+    color: #1a1a1a;
     background: #ffffff;
     border: 1px solid #e0e0dbe0;
-    padding: 14px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.cp-tooltip:not(:has(.tt-custom-wrapper)) {
-    background: #0f172a;
-    color: #ffffff;
-    padding: 8px 12px;
-    font-size: 0.85rem;
-    font-weight: 600;
+.cp-tooltip--custom img {
+    display: block;
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
-    border: none;
 }
 
-@keyframes tooltipFadeIn {
-    0% { opacity: 0; transform: translateY(4px) scale(0.98); }
-    100% { opacity: 1; transform: translateY(0) scale(1); }
+.cp-tooltip--custom p {
+    margin: 6px 0 0;
+}
+
+.cp-tooltip--custom strong {
+    font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cp-tooltip {
+        transition: none;
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .cp-tooltip {
+        max-width: calc(100vw - 20px);
+    }
+    .tt-custom-wrapper {
+        max-width: calc(100vw - 20px);
+    }
 }
